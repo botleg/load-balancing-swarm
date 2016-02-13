@@ -1,7 +1,7 @@
 FROM nginx:latest
 
 RUN apt-get update \
-	&& apt-get install -y unzip \
+	&& apt-get install -y unzip
 
 ADD files/start.sh /bin/start.sh
 RUN chmod +x /bin/start.sh
