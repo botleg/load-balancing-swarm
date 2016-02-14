@@ -1,22 +1,3 @@
-Load Balancing Swarm
-===
-
-This repository contains the files for the docker image, that will create the load balancing configuration for nginx using consul template. It requires consul as the key value store. It works with docker swarm and multi-host networking.
-
-Usage
----
-
-Set the following environment variables:
-
-* `APP_NAME`: The container service name that we want to load balance.
-* `CONSUL_URL`: URL endpoint for consul instance.
-
-Docker Compose
----
-
-Sample docker-compose.yml configuration is given below:
-
-```
 version: '2'
 
 services:
@@ -65,4 +46,3 @@ networks:
     driver: overlay
   back-tier:
     driver: overlay
-```
